@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+%idx-tit {} 
+%idx-tit-line {
+    content: "";
+    background: url($images-url + "idx-l.png");
+    @include box(134px, 7px);
+    @include relative($bottom: -5px);
+}
+.idx-tit {
+    @include grid($display: flex, $align-items: flex-end, $justify-content: center);
+    position: relative;
+    margin-bottom: 10px;
+    &>a{
+    }
+    h4 {
+        @include setFont(30px, #333, 700);
+        margin: 0;
+        img{
+        }
+        span, a {
+            color: #333;
+            display: inline-block;
+            position: relative;
+        }
+    }
+}
