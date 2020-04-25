@@ -4,20 +4,19 @@
       <ul >
         <?php include _template."layout/menu_content.php";?>
       </ul>
-      <div class="hd-hotline"><i class="fas fa-phone-alt"></i>Hotline: <a href="tel:
-        <?=preg_replace('/[^0-9]/','',$company['dienthoai']);?>"><?= $company['dienthoai'] ?></a></div>
+      <div id="search">
+        <div class="my-search">
+          <input type="text" class="form-control keyword" required="true" 
+          onkeypress="doEnter(event)" value="<?=_nhaptukhoatimkiem?>..." 
+          onclick="if(this.value=='<?=_nhaptukhoatimkiem?>...'){this.value=''}" 
+          onblur="if(this.value==''){this.value='<?=_nhaptukhoatimkiem?>...'}"> 
+          <span onclick="onSearch($(this));return false;" class="btn_search">
+            <i class="fas fa-search"></i></span>
+          </div>
+        </div> 
       <?php /* 
       <button class="openBtn timkiem_icon" ><i class="fas fa-search"></i></button>
-            <div id="search">
-              <div class="my-search">
-                <input type="text" class="form-control keyword" required="true" 
-                onkeypress="doEnter(event)" value="<?=_nhaptukhoatimkiem?>..." 
-                onclick="if(this.value=='<?=_nhaptukhoatimkiem?>...'){this.value=''}" 
-                onblur="if(this.value==''){this.value='<?=_nhaptukhoatimkiem?>...'}"> 
-                <span onclick="onSearch($(this));return false;" class="btn_search">
-                  <i class="fas fa-search"></i></span>
-                </div>
-              </div> 
+            
       */?>
     <?php /*
          <div id="myOverlay" class="overlay" style="display: none;">

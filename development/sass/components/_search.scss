@@ -13,9 +13,9 @@
 
 #search {
     width: 100%;
-    max-width: 470px;
+    max-width: 250px;
     z-index: 50;
-    margin-left: 50px;
+    margin-left: 30px;
     &.hien {
         display: block;
     }
@@ -24,25 +24,25 @@
         @include boxstyle($display: flex, $align-items: center, $justify-content:
          space-between);
         overflow: hidden;
-        background-color: #fff; 
-        border: 1px solid #ccc;
-        border-radius: 22px;
+        background-color: #transparent; 
+        border: 1px solid transparent;
+        border-radius: 0;
         .keyword {
             @include flex(1);
-            @include setFont(0.9em, #000);
+            @include setFont(0.9em, #fff);
             padding: 0px 10px;
             border: 0;
-            height: 45px;
+            height: 32px;
             box-shadow: none;
             background-color: transparent;
         }
 
         .btn_search {
-            @include setFont(16px, #b8b6b8);
+            @include setFont(16px, #fff);
             @include boxstyle($display: flex, $justify-content: center, 
               $align-items: center);
             cursor: pointer;
-            @include box(45px, 45px);
+            @include box(32px, 32px);
         }
 
         &:hover {

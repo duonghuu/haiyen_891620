@@ -8,18 +8,18 @@
             
             <li class="categories_li <?php if($_GET['com']=='httt' || $_GET['com']=='order'
             || $_GET['type']=='thuonghieu' || $_GET['type']=='mausac' || $_GET['type']=='size'
-            || $_GET['type']=='txtsp' || $_GET['type']=='san-pham' || $_GET['type']=='coupon' || $_GET['com']=='excel'
+            || $_GET['type']=='txtsp' || $_GET['type']=='thuc-don' || $_GET['type']=='coupon' || $_GET['com']=='excel'
             || $_GET['type']=='txtban-chay' || $_GET['type']=='txtuu-dai' )
             echo ' activemenu' ?>" id="menu_"><a href="" title="" class="exp">
                 <span>Sản phẩm</span><strong></strong></a>
                 <ul class="sub">
-                    <?php phanquyen_menu('Danh mục cấp 1','product','man_danhmuc','san-pham'); ?>
-                    <?php phanquyen_menu('Danh mục cấp 2','product','man_list','san-pham'); ?>
-                    <?php //phanquyen_menu('Danh mục cấp 3','product','man_cat','san-pham'); ?>
-                    <?php phanquyen_menu('Sản phẩm','product','man','san-pham'); ?>
+                    <?php phanquyen_menu('Danh mục cấp 1','product','man_danhmuc','thuc-don'); ?>
+                    <?php phanquyen_menu('Danh mục cấp 2','product','man_list','thuc-don'); ?>
+                    <?php //phanquyen_menu('Danh mục cấp 3','product','man_cat','thuc-don'); ?>
+                    <?php phanquyen_menu('Sản phẩm','product','man','thuc-don'); ?>
                     <?php phanquyen_menu('Text ưu đãi khuyến mãi','about','capnhat','txtuu-dai'); ?>
                     <?php phanquyen_menu('Text sản phẩm bán chạy','about','capnhat','txtban-chay'); ?>
-                    <?php phanquyen_menu('Quản lý hình thức thanh toán','httt','man',''); ?>
+                    <?php //phanquyen_menu('Quản lý hình thức thanh toán','httt','man',''); ?>
                     <?php //phanquyen_menu('Quản lý thương hiệu','news','man','thuonghieu'); ?>
                     <?php //phanquyen_menu('Quản lý màu sắc','news','man','mausac'); ?>
                     <?php //phanquyen_menu('Quản lý size','news','man','size'); ?>

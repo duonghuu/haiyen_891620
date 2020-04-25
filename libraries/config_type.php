@@ -14,16 +14,16 @@ $config['ck'] = array();
 @define ( _ext_thumb , '' );
 switch($type){
 //-------------san pham------------------
-	case 'san-pham':
+	case 'thuc-don':
 	switch($act){
 		case 'danhmuc':
 		$config['type'] = array('ten','seo','hinhanh','noibat');
 		$config['title'] = array('noibat'=>"Nổi bật",'tieubieu'=>"Hiện menu",'hinhanh2'=>"Icon");
 		@define ( _width_thumb , 300 );
-		@define ( _height_thumb , 340 );
+		@define ( _height_thumb , 300 );
 		@define ( _style_thumb , 1 );
 		@define ( _width_thumb2 , 300 );
-		@define ( _height_thumb2 , 340 );
+		@define ( _height_thumb2 , 300 );
 		@define ( _widthhinhanh_thumb , 40 );
 		@define ( _heighthinhanh_thumb , 40 );
 		@define ( _stylehinhanh_thumb , 2 );
@@ -299,10 +299,10 @@ switch($type){
 	case 'logo':
 	switch($act){
 		default:
-		$config['type'] = array('ten','mota');
-		$config['title'] = array('mota'=>'Tiêu đề nhỏ');
-		@define ( _width_thumb2 , 120 );
-		@define ( _height_thumb2 , 120 );
+		// $config['type'] = array('ten','mota');
+		// $config['title'] = array('mota'=>'Tiêu đề nhỏ');
+		@define ( _width_thumb2 , 170 );
+		@define ( _height_thumb2 , 150 );
 		break;
 	}
 	break;
@@ -375,10 +375,10 @@ switch($type){
 	switch($act){
 		default:
 		@define ( _width_thumb , 1366 );
-		@define ( _height_thumb , 495);
+		@define ( _height_thumb , 460);
 		@define ( _style_thumb , 1 );
 		@define ( _width_thumb2 , 1366 );
-		@define ( _height_thumb2 , 495);
+		@define ( _height_thumb2 , 460);
 		break;
 	}
 	break;

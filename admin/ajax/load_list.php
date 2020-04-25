@@ -1,13 +1,5 @@
 <?php
-	session_start();
-	@define('_source', '../sources/');
-	@define('_lib', '../../libraries/');
-	include_once _lib . "config.php";
-	include_once _lib . "constant.php";
-	include_once _lib . "functions.php";
-	include_once _lib . "library.php";
-	include_once _lib . "class.database.php";
-	$d = new database($config['database']);
+	include ("ajax_config.php");
 	
 	$id_danhmuc=$_POST['id_danhmuc'];
 	$id_list=$_POST['id_list'];
@@ -41,5 +33,8 @@
 ?>
 
 <?php for($i=0;$i<count($row_list);$i++){ ?>   
-<option value="<?=$row_list[$i]['id']?>" <?php  if($id_list!=''){if(in_array($row_list[$i]['id'],$row_list)){?> selected="selected"<?php } } ?>> - <?=$row_list[$i]['ten']?></option>
+<option value="<?=$row_list[$i]['id']?>" <?php  
+if($id_list!=''){
+	if(in_array($row_list[$i]['id'],$row_list)){
+		?> selected="selected"<?php } } ?>> - <?=$row_list[$i]['ten']?></option>
 <?php } ?>   

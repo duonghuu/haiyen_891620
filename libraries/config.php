@@ -34,6 +34,7 @@ $config_tam = '/2004/haiyen_891620';
 $config['database']['database'] = 'haiyen891';
 $config['database']['username'] = 'root';
 $config['database']['password'] = '';
+$config['database']['debug'] = 1;
 define ( 'NN_MSHD' , '891620');
 define ( 'NN_AUTHOR' , 'huuduongnina@gmail.com'); 
 $config['author']['name'] = 'Lê Hữu Dương';
@@ -57,7 +58,7 @@ $config_pass="etvdzuqvkdwporgv";
 $login_name = $config_url;
 @define ( 'MAIL_USER' , "mailtransnina@gmail.com" );
 @define ( 'MAIL_PWD' , "etvdzuqvkdwporgv" );
-$config['lang']=array(''=>'Tiếng Việt','en'=>'Tiếng Anh');
+$config['lang']=array(''=>'Tiếng Việt');
 
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 $config['reponsive'] = false;

@@ -13,22 +13,28 @@
                 <a href="<?= $v["link"] ?>" class="slider-link"><picture>
                   <source media="(min-width: 1024px)" srcset="<?= _upload_hinhanh_l.$v["thumb"] ?>" />
                     <source media="(min-width: 550px)" srcset="thumb/768x382/1/<?= _upload_hinhanh_l.$v["thumb"] ?>" />
+                      <?php /* 
                       <img src="thumb/425x212/1/<?= _upload_hinhanh_l.$v["thumb"] ?>" 
+                                            alt="<?= $v["ten"] ?>" /> 
+                      */?>
+                      <img src="<?= _upload_hinhanh_l.$v["thumb"] ?>" 
                       alt="<?= $v["ten"] ?>" />
                     </picture></a>
+                    <?php /* 
                     <div class="slider-text-bg">
-                      <div class="slider-text">
-                        <div class="slider-text__ten">
-                          <?= $v["ten"] ?>
-                        </div>
-                        <div class="slider-text__mota">
-                          <?= $v["mota"] ?>
-                        </div>
-                        <div class="slider-text__button slider-button">
-                          <a href="<?= $v["link"] ?>" class="slider-button__xemthem">Xem Thêm</a>
-                        </div>
-                      </div>
-                    </div>
+                                          <div class="slider-text">
+                                            <div class="slider-text__ten">
+                                              <?= $v["ten"] ?>
+                                            </div>
+                                            <div class="slider-text__mota">
+                                              <?= $v["mota"] ?>
+                                            </div>
+                                            <div class="slider-text__button slider-button">
+                                              <a href="<?= $v["link"] ?>" class="slider-button__xemthem">Xem Thêm</a>
+                                            </div>
+                                          </div>
+                                        </div> 
+                    */?>
                   </section>
                 </div>
               <?php } ?>

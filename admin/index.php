@@ -98,9 +98,6 @@ switch($com){
 	case 'export':
 	$source = "export";
 	break;
-	case 'thanhpho':
-	$source = "thanhpho";
-	break;
 		####Đơn hàng
 	case 'letruot':
 	$source = "letruot";
@@ -122,21 +119,6 @@ switch($com){
 	break;
 	case 'about':
 	$source = "about";
-	break;
-	case 'duan':
-	$source = "duan";
-	break;
-	case 'congtrinh':
-	$source = "congtrinh";
-	break;
-	case 'gioithieu':
-	$source = "gioithieu";
-	break;
-	case 'khuyenmai':
-	$source = "khuyenmai";
-	break;
-	case 'dichvu':
-	$source = "dichvu";
 	break;
 	case 'news':
 	$source = "news";
@@ -163,9 +145,6 @@ switch($com){
 	case 'banner':
 	$source = "banner";
 	break;
-	case 'baiviet':
-	$source = "baiviet";
-	break;
 	case 'hinhanh':
 	$source = "hinhanh";
 	break;
@@ -174,15 +153,6 @@ switch($com){
 	break;
 	case 'footer':
 	$source = "footer";
-	break;
-	case 'phanquyen':
-	$source = "phanquyen";
-	break;
-	case 'com':
-	$source = "com";
-	break;
-	case 'lienhe':
-	$source = "lienhe";
 	break;
 	case 'user':
 	$source = "user";
@@ -197,7 +167,7 @@ switch($com){
 	break;
 }
 	//dump($_SESSION['login_admin']['com']);
-if((!isset($_SESSION[$login_name_admin]) || $_SESSION[$login_name_admin]==false) && $act!="login"){
+if((!isset($_SESSION[$login_name_admin]) || !$_SESSION[$login_name_admin]) && $act!="login"){
 	redirect("index.php?com=user&act=login");
 }
 if($_GET['act']=='man' || $_GET['act']=='man_cat' || $_GET['act']=='man_list' || 
@@ -214,7 +184,9 @@ if($_GET['act']!=''){
 	if($act_['0']=='edit'){$checkurl = 0;}
 	if($act_['0']=='add'){ $checkurl = 1;}
 }
-if($source!="") include _source.$source.".php";
+if($source!="") {
+	include _source.$source.".php";
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
 	"http://www.w3.org/TR/html4/DTD/strict.dtd">
@@ -226,7 +198,7 @@ if($source!="") include _source.$source.".php";
 	<link href="js/t-datepicker/css/t-datepicker.min.css" rel="stylesheet" type="text/css" />
 	<link href="js/t-datepicker/css/themes/t-datepicker-blue.css" rel="stylesheet" type="text/css" />
 	<link href="css/main_repon.css" rel="stylesheet" type="text/css" />
-	<?php if($config['reponsive']==true) { ?>
+	<?php if($config['reponsive']) { ?>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link href="css/media.css" rel="stylesheet" type="text/css" />
 	<?php } else { ?>
