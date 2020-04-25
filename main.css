@@ -7765,7 +7765,7 @@ body.compensate-for-scrollbar {
   height: 100%;
   object-fit: fill; }
 
-.nav-bg:before, .main-nav > ul > li:after, .hd-hotline:before, #footer .ft-tit strong:before, #footer .ft-tit span:before, #giohang .w-giohang .w-giohang-flex .giohang-left-tit:before {
+.nav-bg:before, .main-nav > ul > li:after, .hd-hotline:before, #footer .ft-tit strong:before, #footer .ft-tit span:before, .dmsanpham-item a h2:before, #giohang .w-giohang .w-giohang-flex .giohang-left-tit:before {
   content: '';
   position: absolute; }
 
@@ -10108,6 +10108,106 @@ span.total {
       color: #333;
       display: inline-block;
       position: relative; }
+
+.gioithieu {
+  background-image: url("images/about-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  padding: 50px 0; }
+  .gioithieu-wrap:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .gioithieu-wrap .imgsp {
+    width: 51.25%;
+    float: left; }
+  .gioithieu-wrap .info {
+    width: 46.3333333333%;
+    float: right; }
+    .gioithieu-wrap .info .ten {
+      color: #e01c1a;
+      font-size: 48px;
+      font-weight: 400;
+      font-family: "UTM-Loko";
+      line-height: 1;
+      margin: 10px 0 30px; }
+    .gioithieu-wrap .info .ten2 {
+      color: #333;
+      font-size: 20px;
+      font-weight: 400;
+      font-family: "SVN-Poppins";
+      margin-bottom: 0; }
+    .gioithieu-wrap .info .desc {
+      color: #333;
+      font-size: 14px;
+      margin-bottom: 30px; }
+    .gioithieu-wrap .info .xemthem {
+      color: #fff;
+      font-size: 14px;
+      background-color: #e01c1a;
+      line-height: 45px;
+      padding: 0 35px;
+      display: inline-block;
+      border-radius: 22px; }
+
+.dmsanpham {
+  background-size: cover;
+  padding: 50px 0; }
+  .dmsanpham-main {
+    margin: 0 -4.6875em; }
+  .dmsanpham-item {
+    padding: 0 4.6875em; }
+    .dmsanpham-item a {
+      color: #fff; }
+      .dmsanpham-item a:hover {
+        color: #e01c1a; }
+    .dmsanpham-item a {
+      display: block;
+      width: 290px;
+      margin: 0 auto;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .dmsanpham-item a figure {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        width: 290px;
+        height: 290px;
+        border-radius: 100%;
+        border: 1px dashed #ffb800;
+        padding: 5px;
+        margin-bottom: 25px; }
+        .dmsanpham-item a figure img {
+          width: 100%;
+          height: 100%;
+          border-radius: 100%; }
+      .dmsanpham-item a h2 {
+        color: inherit;
+        font-size: 24px;
+        font-weight: 400;
+        font-family: "SVN-Lobster";
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        min-height: 59px; }
+        .dmsanpham-item a h2:before {
+          width: 225px;
+          height: 59px;
+          background-image: url("images/dm-tit.png");
+          background-repeat: no-repeat;
+          background-position: center center;
+          z-index: -1; }
+      .dmsanpham-item a:hover figure, .dmsanpham-item a:active figure, .dmsanpham-item a:focus figure {
+        border-color: #e01c1a; }
 
 .giohang_fix {
   margin: 0 50px; }

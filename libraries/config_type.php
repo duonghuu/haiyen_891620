@@ -438,13 +438,13 @@ switch($type){
 	case 'gioi-thieu':
 	switch($act){
 		default:
-		$config['type'] = array('seo','noidung');
+		$config['type'] = array('seo','noidung','hinhanh','ten','ten2','mota');
 		$config['title'] = array('ten2'=>'Tiêu để nhỏ');
-		@define ( _width_thumb , 585 );
-		@define ( _height_thumb , 400 );
+		@define ( _width_thumb , 520 );
+		@define ( _height_thumb , 360 );
 		@define ( _style_thumb , 1 );
-		@define ( _width_thumb2 , 585 );
-		@define ( _height_thumb2 , 400 );
+		@define ( _width_thumb2 , 520 );
+		@define ( _height_thumb2 , 360 );
 		break;
 	}
 	break;

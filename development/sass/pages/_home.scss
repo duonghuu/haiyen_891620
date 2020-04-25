@@ -26,3 +26,88 @@
         }
     }
 }
+.gioithieu{
+    @include bg("about-bg.jpg",$background-repeat: no-repeat,$background-size: cover,$background-position: 0 0);
+    padding: 50px 0;
+    &-wrap{
+        @include clearfix;
+        .imgsp{
+            width: percentage(615/1200);
+            float: left;
+            figure{
+                img{}
+            }
+        }
+        .info{
+            width: percentage(556/1200);
+            float: right;
+            .ten{
+                @include setFont(48px, $theme-color, 400, $font-UTM-Loko);
+                line-height: 1;
+                margin: 10px 0 30px;
+            }
+            .ten2{
+                @include setFont(20px, #333, 400, $font-SVN-Poppins);
+                margin-bottom: 0;
+            }
+            .desc{
+                @include setFont(14px, #333);
+                margin-bottom: 30px;
+            }
+            .xemthem{
+                @include setFont(14px, #fff);
+                background-color: $theme-color;
+                line-height: 45px;
+                padding: 0 35px;
+                display: inline-block;
+                border-radius: 22px;
+            }
+        }
+    }
+}
+.dmsanpham{
+    background-size: cover;
+    padding: 50px 0;
+    $dmspgap: em(75);
+    &-main{
+        margin: 0 -#{$dmspgap};
+    }
+    &-item{
+        padding: 0 $dmspgap;
+        @include setTagAHover(#fff, $theme-color);
+        a{
+            display: block;
+            width: 290px;
+            margin: 0 auto;
+            @include transition(all 0.3s ease);
+            
+            figure{
+                @include transition(all 0.3s ease);
+                @include box(290px, 290px, 100%);
+                border: 1px dashed #ffb800;
+                padding: 5px;
+                margin-bottom: 25px;
+                img{
+                    @include box(100%, 100%, 100%);
+                }
+            }
+            h2{
+                @include setFont(24px, inherit, 400, $font-SVN-Lobster);
+                @include grid(flex, $flex-wrap: wrap, $justify-content: center, 
+                  $align-items: center, $gutter: null);
+                margin-bottom: 0;
+                min-height: 59px;
+                @include p-el(before, $el-width: 225px, $el-height: 59px){
+                    @include bg("dm-tit.png",$background-repeat: no-repeat,$background-size: null,
+                        $background-position: center center);
+                    z-index: -1;
+                };
+            }
+            @include on-event{
+                figure{
+                    border-color: $theme-color;
+                }
+            };
+        }
+    }
+}
