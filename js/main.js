@@ -6156,17 +6156,17 @@ $(document).ready(function() {
     //       'top': vitri + 'px'
     //     })
     //   });
-    // $(window).scroll(function(){
-    //   var cach_top = $(window).scrollTop();
-    //   var heaigt_header = $('.hd-top').height();
-    //   if(cach_top >= heaigt_header){
-    //     $('.hd-bot').css({position: 'fixed', top: '0px', zIndex:99999});
-    //     $('.hd-bot').addClass('fixed');
-    //   }else{
-    //     $('.hd-bot').css({position: 'relative', top: 'auto'});
-    //     $('.hd-bot').removeClass('fixed');
-    //   }
-    // });
+    $(window).scroll(function(){
+      var cach_top = $(window).scrollTop();
+      var heaigt_header = $('.hd-bg').height();
+      if(cach_top >= heaigt_header){
+        $('.nav-bg').css({position: 'fixed', top: '0px', zIndex:99999});
+        $('.nav-bg').addClass('fixed');
+      }else{
+        $('.nav-bg').css({position: 'relative', top: 'auto'});
+        $('.nav-bg').removeClass('fixed');
+      }
+    });
   }
   
 });
@@ -6236,7 +6236,7 @@ $('.dmsanpham-main').on({
             }
         }]
     });
-    $('.visao-main').on({
+    $('.ykien-main').on({
           beforeChange: function(event, slick, currentSlide, nextSlide) {
               myLazyLoad.update();
           }
@@ -6244,7 +6244,7 @@ $('.dmsanpham-main').on({
           lazyLoad: 'ondemand',
           infinite: true,
           accessibility: false,
-          slidesToShow: 4,
+          slidesToShow: 2,
           slidesToScroll: 1,
           autoplay: false,
           autoplaySpeed: 3000,
@@ -6256,12 +6256,12 @@ $('.dmsanpham-main').on({
           responsive: [{
               breakpoint: 800,
               settings: {
-                  slidesToShow: 3
+                  slidesToShow: 2
               }
           },{
               breakpoint: 500,
               settings: {
-                  slidesToShow: 2
+                  slidesToShow: 1
               }
           },{
               breakpoint: 430,

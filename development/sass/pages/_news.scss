@@ -70,21 +70,35 @@
     @extend %news-tpl-grid-horizontal;
 }
 .othernews{
+    h5{
+        span{
+            background-color: $theme-color;
+            color: #fff;
+        }
+    }
     ul.khac{
-        list-style-type:none;
+        list-style-type: none;
         list-style-position: inside;
         li{
-            margin:5px 0;
-            list-style-type:square;
+            margin: 5px 0;
+            list-style-type: square;
             a{
-                color:#4A4A4A;text-decoration:none;transition:0.4s;
+                color: #4A4A4A;
+                text-decoration: none;
+                @include transition(all 0.4s ease);
                 i{
-                    margin-right:6px;
+                    margin-right: 6px;
                 }
-                &:hover{
-                    color:#f00;
-                }
+                @include on-event{
+                    color: #f00;
+                };
             }
         }
+    }
+}
+#article{
+    .article__name{
+        @include setFont(em(26), $theme-color, 700, $font-text);
+        margin-bottom: 10px;
     }
 }

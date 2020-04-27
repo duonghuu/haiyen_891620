@@ -7,10 +7,10 @@ $d = new database($config['database']);
 $company= get_fetch("select *,ten$lang as ten,diachi$lang as diachi,slogan$lang as slogan from #_company limit 0,1");
 $thuoctinh = json_decode($company["thuoctinh"],true);
 $datacom = array(
-	array("tbl"=>"product_danhmuc","field"=>"id_danhmuc","source"=>"product","type"=>"san-pham","com"=>"san-pham"),
-	array("tbl"=>"product_list","field"=>"id_list","source"=>"product","type"=>"san-pham","com"=>"san-pham"),
-	// array("tbl"=>"product_cat","field"=>"id_cat","source"=>"product","type"=>"san-pham","com"=>"san-pham"),
-	array("tbl"=>"product","field"=>"id","source"=>"product","type"=>"san-pham","com"=>"san-pham"),
+	array("tbl"=>"product_danhmuc","field"=>"id_danhmuc","source"=>"product","type"=>"thuc-don","com"=>"thuc-don"),
+	array("tbl"=>"product_list","field"=>"id_list","source"=>"product","type"=>"thuc-don","com"=>"thuc-don"),
+	// array("tbl"=>"product_cat","field"=>"id_cat","source"=>"product","type"=>"thuc-don","com"=>"thuc-don"),
+	array("tbl"=>"product","field"=>"id","source"=>"product","type"=>"thuc-don","com"=>"thuc-don"),
 
 	// array("tbl"=>"news_danhmuc","field"=>"id_danhmuc","source"=>"news","type"=>"cokhi","com"=>"co-khi"),
 	// array("tbl"=>"news_list","field"=>"id_list","source"=>"news","type"=>"cokhi","com"=>"co-khi"),
@@ -141,34 +141,34 @@ switch($com)
 	$type_og = "article";
 	break;
 	case 'tim-kiem':
-	$type = "san-pham";
+	$type = "thuc-don";
 	$title = _ketquatimkiem;
 	$title_cat = _ketquatimkiem;
 	$source = "search";
 	$template = "product";
 	break;
-	case 'san-pham':
-	$type = "san-pham";
-	$title = _sanpham;
-	$title_cat = _sanpham;
+	case 'thuc-don':
+	$type = "thuc-don";
+	$title = _thucdon;
+	$title_cat = _thucdon;
 	$title_other = _sanphamkhac;
 	$source = "product";
 	$template = isset($_GET['id']) ? "product_detail" : "product";
 	$type_og = isset($_GET['id']) ? "article" : "object";
 	break;
 	case 'thuong-hieu':
-	$type = "san-pham";
-	$title = _sanpham;
-	$title_cat = _sanpham;
+	$type = "thuc-don";
+	$title = _thucdon;
+	$title_cat = _thucdon;
 	$title_other = _sanphamkhac;
 	$source = "thuonghieu";
 	$template = isset($_GET['id']) ? "product_detail" : "product";
 	$type_og = isset($_GET['id']) ? "article" : "object";
 	break;
 	case 'phan-trang-danh-muc':
-	$type = "san-pham";
-	$title = _sanpham;
-	$title_cat = _sanpham;
+	$type = "thuc-don";
+	$title = _thucdon;
+	$title_cat = _thucdon;
 	$source = "phantrang_dm";
 	$template = "phantrang_dm";
 	break;

@@ -344,16 +344,15 @@ function lay_slider($type,$class='',$width=0,$height=0,$zc=2){
 		// $linkct= '<a href="'.$link.'" class="chitietnt" >Xem chi tiết</a>';
 		// $linkct .= '<a href="#" data-id="'.$v["id"].'" class="dathang">
 		// <i class="fas fa-shopping-cart"></i> Đặt hàng</a>';
-		$linkct = '<a href="#" data-id="'.$v["id"].'" class="muangay">
-		Thêm vào giỏ</a>';
+		// $linkct = '<a href="#" data-id="'.$v["id"].'" class="muangay">
+		// Thêm vào giỏ</a>';
 		echo $slickdiv.'<div class="pr-box name '.$wowclass.'" >
 		<article>
 				<a href="'.$link.'" class="imgsp zoom_hinh">'.$imgurl.$cls_moi.$cls_banchay.
 				$giaspgiam.'</a> 
 			<div class="info">
 			<h3><a href="'.$link.'">'.$v["ten"].'</a></h3>
-			<p>'.$s_gia.'</p>
-			'.$linkct.'
+			<p>Giá: '.$s_gia.'</p>
 			</div>
 		</article></div>'.$slickenddiv;
 	}

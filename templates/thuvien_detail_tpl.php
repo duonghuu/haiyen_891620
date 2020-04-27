@@ -1,7 +1,8 @@
 <div class="tieude_giua"><div><?=$title_cat?></div></div>
 <div class="box_container">
     
-        <?php if((!empty($hinhthem)) && $type=="thu-vien"){
+        <?php 
+        if((!empty($hinhthem)) && $type=="thu-vien"){
                            ?>
                            <div class="tva-detail w-clear" id="tva" style="display:none;">
                             <?php foreach ($hinhthem as $key => $value) {

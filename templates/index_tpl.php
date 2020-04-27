@@ -31,3 +31,121 @@ $img_about = GetImg(_upload_hinhanh_l.$about["thumb"]);
     </div>
   </div>
 </div>
+<div class="thucdon">
+  <div class="container">
+    <div class="idx-tit">
+      <h4><span><?= $txtbanchay["ten"] ?></span></h4>
+    </div>
+    <div class="idx-desc">
+      <?= $txtbanchay["mota"] ?>
+      <img src="images/idx-tit.png" alt="idx-tit">
+    </div>
+    <div class="product-grid">
+      <?php foreach ($spnoibat as $key => $value) {
+        showProduct($value);
+      } ?>
+    </div>
+  </div>
+</div>
+<div class="visao lazy" data-bg="url(images/taisao.jpg)">
+  <div class="container">
+    <div class="idx-tit">
+      <h4><span><?= $txtvisao["ten"] ?></span></h4>
+    </div>
+    <div class="idx-desc">
+      <?= $txtvisao["mota"] ?>
+      <img src="images/idx-tit.png" alt="idx-tit">
+    </div>
+    <div class="visao-box">
+      <?php foreach ($visao as $key => $value) { 
+        $img = _upload_tintuc_l.$value["thumb"];
+        $cls = (($key+1)%2 == 0)?'even':'odd';
+        ?>
+        <div class="visao-item visao--<?= $cls ?>">
+          <article>
+            <figure><img src="<?= $img ?>" alt="<?= $value["ten"] ?>"></figure>
+            <div class="info">
+              <h5><?= $value["ten"] ?></h5>
+              <p><?= catchuoi($value["mota"],50) ?></p>
+            </div>
+          </article>
+        </div>
+      <?php } ?>
+    </div>
+  </div>
+</div>
+<div class="ykien lazy" data-bg="url(images/ykien.jpg)">
+  <div class="container">
+    <div class="idx-tit">
+      <h4><span><?= $txtykien["ten"] ?></span></h4>
+    </div>
+    <div class="idx-desc">
+      <?= $txtykien["mota"] ?>
+      <img src="images/idx-tit.png" alt="idx-tit">
+    </div>
+    <div class="ykien-main">
+      <?php foreach ($ykien as $key => $value) { 
+        $img = _upload_tintuc_l.$value["thumb"];
+        ?>
+        <div class="ykien-item">
+          <article>
+          <figure><img src="<?= $img ?>" alt="<?= $value["ten"] ?>"></figure>
+          <div class="info">
+            <div class="desc">
+              <span>
+                <?= catchuoi($value["mota"],90) ?>
+              </span>
+            </div>
+            <p>Ngày <?= date('d/m/Y',$value["ngaytao"]) ?></p>
+            <p><strong><?= $value["ten"] ?></strong></p>
+            <p><?= $value["chucvu"] ?></p>
+          </div>
+          </article>
+        </div>
+      <?php } ?>
+    </div>
+  </div>
+</div>
+<div class="tin-video">
+  <div class="container">
+    <div class="idx-tit">
+      <h4><span><?= $txttintuc["ten"] ?></span></h4>
+    </div>
+    <div class="idx-desc">
+      <?= $txttintuc["mota"] ?>
+      <img src="images/idx-tit.png" alt="idx-tit">
+    </div>
+    <div class="tin-video-flex">
+      <div class="tin-bg">
+        <div class="tinnb-main">
+          <?php foreach ($tinnb as $key => $value) {
+            $img = _upload_tintuc_l.$value["thumb"];
+           ?>
+            <div class="tinnb-item">
+              <a href="<?= get_url($value,'tin-tuc') ?>">
+                <figure><img src="<?= $img ?>" alt="<?= $value["ten"] ?>"></figure>
+                <div class="info">
+                  <span>Ngày: <?= date('d/m/Y',$value["ngaytao"]) ?></span>
+                  <h5><?= $value["ten"] ?></h5>
+                  <p><?= catchuoi($value["mota"],120) ?></p>
+                </div>
+              </a>
+            </div>
+          <?php } ?>
+        </div>
+      </div>
+      <div class="video-bg">
+        <div id="video-idx">
+        </div>
+        <?php if(count($video)>1){ ?>
+        <select class="form-control" id="lstvideo" name="lstvideo">
+          <option value="">Video ...</option>
+          <?php foreach($video as $v) { ?>
+          <option value="<?= getYoutubeIdFromUrl($v["link"]) ?>"><?= $v["ten"] ?></option>
+          <?php } ?>
+        </select>
+        <?php } ?>
+      </div>
+    </div>
+  </div>
+</div>

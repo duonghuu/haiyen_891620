@@ -11,7 +11,7 @@
     font-weight: 700;
     font-size: 20px;
 }
-$product-gutter: percentage(33/1200);
+$product-gutter: percentage(26/1200);
 .product-grid{
     @include grid($display: flex, $flex-wrap: wrap, $gutter: $product-gutter);
 
@@ -35,14 +35,11 @@ $product-gutter: percentage(33/1200);
         position:relative;
         margin: 0 auto;
         background: #fff;
-        border: 1px dashed #ccc;
-        padding: 5px;
-        border-radius: 5px;
         .imgsp{
             display: block;
             overflow: hidden;
             position: relative;
-            padding-top: 100%;
+            padding-top: percentage(220/280);
             margin-bottom: 10px;
             img{
                 @extend %img-fill; 
@@ -63,7 +60,7 @@ $product-gutter: percentage(33/1200);
             position: relative;
             text-align: center;
             h3{
-                @include setFont(15px, #333, 700);
+                @include setFont(16px, #333, 400);
                 @include setTagAHover(#333, $theme-color);
                 margin-bottom: 0;
                 a{
@@ -74,9 +71,9 @@ $product-gutter: percentage(33/1200);
 
             p{
                 @include boxstyle($display: flex, $flex-wrap: wrap, 
-                    $align-items: flex-end, $justify-content: space-between);
-                @include setFont(13px, #333);
-                margin: 7px percentage(24/274);
+                    $align-items: flex-end, $justify-content: center);
+                @include setFont(16px, #333);
+                margin: 0;
                 line-height: 1.5;
                 del{
                     color: #8c8c8c;
@@ -92,7 +89,8 @@ $product-gutter: percentage(33/1200);
                 }
 
                 span{
-                    @include setFont(15px, $theme-color, 700);
+                    color: $theme-color;
+                    margin-left: 5px;
                 }
             }
         }

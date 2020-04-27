@@ -50,17 +50,17 @@ switch($type){
 
 		default:
 		$config['type'] = array('seo','ten','mota','noibat','danhmuc','list','hinhanh','noidung',
-			'gia','giakm','spbanchay');
+			'gia','giakm','hinhthem');
 		$config['ck'] = array('mota2');
 		$config['title'] = array('tieubieu'=>"Sản phẩm hot",'noibat'=>"Nổi bật",
 			'spmoi'=>"Mới",'spbanchay'=>"Bán chạy","mota"=>"Mô tả","toado"=>"Iframe google map",
 			"mota2"=>"Mô tả",'mattien'=>"Số người","dientich"=>"Giá","thuonghieu"=>"Thương hiệu",
 			"vitri"=>"Vị trí");
 		@define ( _width_thumb , 400 );
-		@define ( _height_thumb , 400 );
-		@define ( _style_thumb , 1 );
+		@define ( _height_thumb , 315 );
+		@define ( _style_thumb , 2 );
 		@define ( _width_thumb2 , 700 );
-		@define ( _height_thumb2 , 700 );
+		@define ( _height_thumb2 , 550 );
 		break;
 	}
 	break;
@@ -142,7 +142,7 @@ switch($type){
 	case 'vi-sao':
 	switch($act){
 		default:
-		$config['type'] = array('ten','hinhanh','home');
+		$config['type'] = array('ten','hinhanh','mota','home');
 		@define ( _width_thumb , 70 );
 		@define ( _height_thumb , 70 );
 		@define ( _style_thumb , 1 );
@@ -152,6 +152,30 @@ switch($type){
 	}
 	break;
 	case 'txtvi-sao':
+	switch($act){
+		default:
+		$config['type'] = array('ten','mota');
+		@define ( _width_thumb , 680 );
+		@define ( _height_thumb , 750 );
+		@define ( _style_thumb , 1 );
+		@define ( _width_thumb2 , 680 );
+		@define ( _height_thumb2 , 750 );
+		break;
+	}
+	break;
+	case 'y-kien':
+	switch($act){
+		default:
+		$config['type'] = array('ten','hinhanh','mota','home','chucvu');
+		@define ( _width_thumb , 150 );
+		@define ( _height_thumb , 150 );
+		@define ( _style_thumb , 1 );
+		@define ( _width_thumb2 , 150);
+		@define ( _height_thumb2 , 150 );
+		break;
+	}
+	break;
+	case 'txty-kien':
 	switch($act){
 		default:
 		$config['type'] = array('ten','mota');
@@ -185,11 +209,11 @@ switch($type){
 		break;
 		default:
 		$config['type'] = array('seo','ten','noidung','mota','hinhanh','noibat','home');
-		@define ( _width_thumb , 600 );
-		@define ( _height_thumb , 420 );
+		@define ( _width_thumb , 400 );
+		@define ( _height_thumb , 400 );
 		@define ( _style_thumb , 1 );
-		@define ( _width_thumb2 , 600);
-		@define ( _height_thumb2 , 420 );
+		@define ( _width_thumb2 , 400);
+		@define ( _height_thumb2 , 400 );
 		break;
 	}
 	break;
@@ -271,7 +295,7 @@ switch($type){
 		@define ( _height_thumb2 , 600 );
 		break;
 		default:
-		$config['type'] = array('ten','seo','noibat','hinhthem','home','hinhanh');
+		$config['type'] = array('ten','seo','hinhthem','hinhanh');
 		@define ( _width_thumb , 600 );
 		@define ( _height_thumb , 600 );
 		@define ( _style_thumb , 1 );
@@ -449,7 +473,6 @@ switch($type){
 	}
 	break;
 	case 'txtban-chay':
-	case 'txtuu-dai':
 	switch($act){
 		default:
 		$config['type'] = array('ten','mota');

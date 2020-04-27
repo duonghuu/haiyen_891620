@@ -235,15 +235,19 @@ function edit(){
 	global $d, $item, $login_name_admin,$config;
 
 	if(!empty($_POST)){
-		$sql = "select * from #_user where username!='".$_SESSION['login_admin']['username']."' and username='".$_POST['username']."' and role=3";
-		$d->query($sql);
-		if($d->num_rows() > 0) transfer("Tên đăng nhập này đã có","index.php?com=user&act=admin_edit");
 
+		$sql = "select * from #_user where username!='".$_SESSION['login_admin']['username']."'
+		 and username='".$_POST['username']."' and role=3";
+		$d->query($sql);
+		
+		if($d->num_rows() > 0) transfer("Tên đăng nhập này đã có","index.php?com=user&act=admin_edit");
+		
 		$sql = "select * from #_user where username='".$_SESSION['login_admin']['username']."'";
 		$d->query($sql);
 		if($d->num_rows() == 1){
 			$row = $d->fetch_array();
-			if($row['password'] != encrypt_password($config['salt_sta'],$_POST['oldpassword'],$config['salt_end'])) transfer("Mật khẩu không chính xác","index.php?com=user&act=admin_edit");
+			if($row['password'] != encrypt_password($config['salt_sta'],$_POST['oldpassword'],$config['salt_end']))
+			 transfer("Mật khẩu không chính xác","index.php?com=user&act=admin_edit");
 		}else{
 			die('Hệ thống bị lỗi. Xin liên hệ với admin. <br>Cám ơn.');
 		}

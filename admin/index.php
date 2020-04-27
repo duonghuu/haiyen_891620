@@ -188,10 +188,9 @@ if($source!="") {
 	include _source.$source.".php";
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/DTD/strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<!doctype html>
+<html lang="vi">
+<head itemscope itemtype="https://schema.org/WebSite">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Administrator - Hệ thống quản trị nội dung</title>
 	<!--<link href="css/main.css" rel="stylesheet" type="text/css" />-->
@@ -227,7 +226,6 @@ if($source!="") {
 			$(".main_select").select2();
 		});
 	</script>
-	<link href="css/all.min.css" rel="stylesheet">
 	<link href="css/fSelect.css" rel="stylesheet">
 	<script src="js/fSelect.js" type="text/javascript"></script>
 	<script type="text/javascript">

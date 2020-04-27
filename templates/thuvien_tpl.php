@@ -1,4 +1,6 @@
-<div class="tieude_giua"><div><?=$title_cat?></div></div>
+<?php /* 
+<div class="tieude_giua"><div><?=$title_cat?></div></div> 
+*/?>
 <div class="box_container">
     <?php /*<?php 
      $idthuvien=get_fetch("select mota$lang as mota,ten$lang as ten,tenkhongdau,id,thumb,photo,type,ngaytao from #_news where type='thuvien'");

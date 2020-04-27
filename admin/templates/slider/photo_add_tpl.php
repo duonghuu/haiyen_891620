@@ -107,7 +107,7 @@
       <div class="clear"></div>
     </div>
     <?php if($type=="slider"){ ?>
-      <div class="formRow ">   
+      <div class="formRow none">   
         <label>Mô tả <?=$i+1?>:</label>
         <div class="formRight">
           <textarea <?php echo $cls_ck; ?> rows="8" cols="" title="Viết mô tả ngắn bài viết" class="tipS" name="mota<?=$key?><?=$i?>" id="mota<?=$key?><?=$i?>"></textarea>

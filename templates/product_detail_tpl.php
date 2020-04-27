@@ -91,9 +91,7 @@
 <?php /* 
 <div class="li"><b><?=_luotxem?>:</b> <span><?=$row_detail['luotxem']?></span></div> 
 */?>
-<div class="li"><b><?=_soluong?>:</b> <input type="number" value="1" class="soluong" /></div>   
-<div class="li" style="display: flex;flex-wrap: wrap;justify-content: space-between;"><a class="dathang nutdathang" 
-  data-id="<?=$row_detail['id']?>">Thêm vào giỏ</a> <a class="muangay nutdathang" data-id="<?=$row_detail['id']?>">Đặt mua ngay</a></div>
+
 <?php /*  <div class="li"><div class="danhgiasao" data-url="<?=getCurrentPageURL();?>">
 <?php for($i=1;$i<=5;$i++) { ?><span data-value="<?=$i?>" data-id="<?=$row_detail["id"]?>"></span>
 <?php } ?>&nbsp;&nbsp;<b class="num_danhgia"><?=$num_danhgiasao?>/5</b></div> </div> */?>

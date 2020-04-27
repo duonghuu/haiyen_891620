@@ -62,6 +62,7 @@
 @define ('_xemthemhinhanh','View more');
 @define ('_hethongbanhmi','Muc Dong system');
 @define ('_giomocua','Giờ mở cửa');
+@define ('_thucdon','Menu');
 @define ('_chuyencua','Story of');
 @define ('_thongtinkhuyenmai','Promotion news');
 @define ('_dichvucuachungtoi','Our services');

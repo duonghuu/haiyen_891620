@@ -3,6 +3,7 @@
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="//www.google.com/">
 <link rel="dns-prefetch" href="//code.jquery.com/">
+<link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com/">
 <link rel="SHORTCUT ICON" href="<?=_upload_hinhanh_l.$company['favicon']?>" type="image/x-icon" />
 <META NAME="ROBOTS" CONTENT="<?=$meta_robots?>" />
 <meta name="author" content="<?=$company['ten']?>" />

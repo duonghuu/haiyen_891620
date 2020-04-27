@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer id="footer" class="lazy" data-bg="url(images/ft-bg.jpg)">
   <div class="ft-top ">
     <div class="container">
       <div class="ft-flex">
@@ -9,32 +9,28 @@
           <?php /* <h4 class="ft-company"><a href=""><?= $company["ten"] ?></a></h4> */?>
           <div class="content"> <?php echo lay_text('footer'); ?> </div>
         </div>
-        <div class="ft-dknt">
-          <p class="ft-tit"><span><?= _mailtit ?></span></p>
-          <?php include _template."layout/dangkynhantin.php"; ?>
-        </div>
-        <div class="ft-social">
-          <p class="ft-tit"><span><?= _ketnoichungtoi ?></span></p>
-          <div class="mxh"><?= lay_mxh("mxh") ?></div>
+        <div class="ft-baiviet">
+          <p class="ft-tit"><span>Chính sách hỗ trợ</span></p>
+          <?= for1('news','chinh-sach','chinh-sach','.html') ?>
         </div>
         
-        <?php /* <?php  if($deviceType != "phone"){ ?>
-                <div class="ft-fanpage">
-                  <p class="ft-tit text-uppercase"><span>Fanpage facebook</span></p>
-                  <div class="fanpageplace">
-                    <div class="fb-page" data-href="<?=$company['fanpage']?>" data-width="470" data-height="380" 
-                      data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" 
-                      data-show-posts="false">
-                      <div class="fb-xfbml-parse-ignore">
-                        <blockquote cite="<?=$company['fanpage']?>">
-                          <a href="<?=$company['fanpage']?>">Facebook</a>
-                        </blockquote>
-                      </div>
-                    </div>      <!-- end fb-page  -->
-                  </div>
+        <?php  if($deviceType != "phone"){ ?>
+          <div class="ft-fanpage">
+            <p class="ft-tit text-capitalize"><span>Fanpage</span></p>
+            <div class="fanpageplace">
+              <div class="fb-page" data-href="<?=$company['fanpage']?>" data-width="470" data-height="380" 
+                data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" 
+                data-show-posts="false">
+                <div class="fb-xfbml-parse-ignore">
+                  <blockquote cite="<?=$company['fanpage']?>">
+                    <a href="<?=$company['fanpage']?>">Facebook</a>
+                  </blockquote>
                 </div>
-                
-                <?php } ?> */?>
+              </div>      <!-- end fb-page  -->
+            </div>
+          </div>
+
+        <?php } ?>
     </div>
   </div>
 </div>
@@ -44,11 +40,12 @@
       <p class="text">Copyright © 2020 <?= $company["ten"] ?>. Design by Nina</p>
       <ul class="ft-thongke">
         <li>Đang Online: <span><?php $count=count_online();echo $tong_xem=$count['dangxem'];?></span></li>
+        <li><?=_thongketuan?>: <span><?=$trongtuan;?></span></li>   
         <li><?=_thongkethang?>: <span><?=$trongthang;?></span></li> 
         <li><?=_tongtruycap?>: <span><?php $count=count_online();echo $tong_xem=$count['daxem'];?></span></li>
       </ul>
              <?php /*  
-        <li><?=_thongketuan?>: <span><?=$trongtuan;?></span></li>   
+        
         <li><?=_ngayhomqua?>: <span><?=$homqua;?></span></li> 
 */?>
     </div>
