@@ -30,15 +30,11 @@ if ($cautruyvan != $kiemtra){
 $link_id = true;
 
 $config['database']['servername'] = 'localhost';
-$config_tam = '/2004/haiyen_891620';
-$config['database']['database'] = 'haiyen891';
+$config_tam = '/thietbithaovy';
+$config['database']['database'] = 'thietbithaovy';
 $config['database']['username'] = 'root';
 $config['database']['password'] = '';
 $config['database']['debug'] = 1;
-define ( 'NN_MSHD' , '891620');
-define ( 'NN_AUTHOR' , 'huuduongnina@gmail.com'); 
-$config['author']['name'] = 'Lê Hữu Dương';
-$config['author']['email'] = 'huuduongnina@gmail.com';
 // if (version_compare(phpversion(), '5.3.10', '<')) {
 if (version_compare(phpversion(), '7.0.0', '<')) {
     $config['database']['dbtype'] = 'mysql';
@@ -51,25 +47,23 @@ $config_url_ssl = 'http://'.$config_url;
 $config['database']['refix'] = 'table_';
 if($config_tam==''){$meta_robots = 'noodp, INDEX, FOLLOW';$sendType = true;}else{$meta_robots = 'NOINDEX, NOFOLLOW';$sendType = false;}
 $ip_host = '127.0.0.1';
-$mail_host = 'contact@demo.com';
-$pass_mail = '1234qwer!@#$';
-$config_email="mailtransnina@gmail.com";
-$config_pass="etvdzuqvkdwporgv";
+$mail_host = 'mail@web.com';
+$pass_mail = 'nttjbh^';
+$config_email="noreplyagent000@gmail.com";
+$config_pass="lzecymbhcdyoghjk";
 $login_name = $config_url;
-@define ( 'MAIL_USER' , "mailtransnina@gmail.com" );
-@define ( 'MAIL_PWD' , "etvdzuqvkdwporgv" );
+@define ( 'MAIL_USER' , "noreplyagent000@gmail.com" );
+@define ( 'MAIL_PWD' , "lzecymbhcdyoghjk" );
 $config['lang']=array(''=>'Tiếng Việt');
 
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 $config['reponsive'] = false;
 $config['company'] = array("tt_zalo"=>"Zalo","tt_messenger"=>"Messenger");
-$config['salt_sta'] = '@nina';
-$config['salt_end'] = '@#749NFCC^';
+$config['salt_sta'] = '@xxx';
+$config['salt_end'] = '@#Q3FLDWN0^';
 
-	// +sitekey 6LfrTJkUAAAAAJvr-qt-eCnpESTHTgq275qGaMyB
-	// +secretkey 6LfrTJkUAAAAAKT9qwHJMryQsVSfSw5XI_upBjZS
-$config['recaptcha_sitekey'] = '6LfrTJkUAAAAAJvr-qt-eCnpESTHTgq275qGaMyB';
-$config['recaptcha_secretkey'] = '6LfrTJkUAAAAAKT9qwHJMryQsVSfSw5XI_upBjZS';
+$config['recaptcha_sitekey'] = '6LeanJkUAAAAAKACFKuDzt05rw4FBBGVoaAhFLhj';
+$config['recaptcha_secretkey'] = '6LeanJkUAAAAAOgMg52a2M0AU9_NJJdidbYO2ulm';
 $lang_default = array("","en","cn");
 if(!isset($_SESSION['lang']) or !in_array($_SESSION['lang'], $lang_default))
 {
