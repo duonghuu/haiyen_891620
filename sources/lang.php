@@ -198,7 +198,7 @@
 @define ('_guiemailthanhcong','Gửi email đăng ký nhận tin thành công');
 @define ('_guiemailthatbai','Đăng ký nhận email thất bại. Vui lòng đăng ký lại sau. Cảm ơn');
 @define ('_dangkynhantin','Đăng ký nhận tin');
-@define ('_mailtit','Đăng ký ngay để được nhận khuyến mãi');
+@define ('_mailtit','Đăng ký nhận thông tin khuyến mãi');
 @define ('_maildesc','Đăng ký nhận tin với chúng tôi ngay để nhận thông báo');
 @define ('_guilienhethanhcong','Thông tin liên hệ đã được gửi.<br /> Cảm ơn');
 @define ('_guilienhethatbai','Thông tin liên hệ chưa gửi được. Vui lòng gửi lại sau.<br /> Cảm ơn');

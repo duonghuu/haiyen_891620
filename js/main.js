@@ -6150,12 +6150,12 @@ $(document).ready(function() {
     }, true);
   };
   if(js_deviceType == "computer"){
-    // $('.hoverhori').hover(function() {
-    //     var vitri = $(this).position().top;
-    //     $('.hoverhori> ul').css({
-    //       'top': vitri + 'px'
-    //     })
-    //   });
+    $('.hoverhori').hover(function() {
+        var vitri = $(this).position().top;
+        $('.hoverhori> ul').css({
+          'top': vitri + 'px'
+        })
+      });
     $(window).scroll(function(){
       var cach_top = $(window).scrollTop();
       var heaigt_header = $('.hd-bg').height();
@@ -6172,6 +6172,45 @@ $(document).ready(function() {
 });
 
 
+$('.doitac-main').on({
+      beforeChange: function(event, slick, currentSlide, nextSlide) {
+          myLazyLoad.update();
+      }
+  }).slick({
+      lazyLoad: 'ondemand',
+      infinite: true,
+      accessibility: false,
+      slidesToShow: 9,
+      slidesToScroll: 1,
+      autoplay: false,
+      autoplaySpeed: 3000,
+      speed: 1000,
+      arrows: true,
+      centerMode: false,
+      dots: false,
+      draggable: true,
+      responsive: [{
+          breakpoint: 830,
+          settings: {
+              slidesToShow: 6
+          }
+      },{
+          breakpoint: 500,
+          settings: {
+              slidesToShow: 5
+          }
+      },{
+          breakpoint: 400,
+          settings: {
+              slidesToShow: 3
+          }
+      },{
+          breakpoint: 330,
+          settings: {
+              slidesToShow: 2
+          }
+      }]
+  });
 $('.dmsanpham-main').on({
       beforeChange: function(event, slick, currentSlide, nextSlide) {
           myLazyLoad.update();
@@ -6182,7 +6221,7 @@ $('.dmsanpham-main').on({
       accessibility: false,
       slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 3000,
       speed: 1000,
       arrows: true,
@@ -6216,13 +6255,13 @@ $('.dmsanpham-main').on({
         accessibility: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3000,
         speed: 1000,
         arrows: true,
         centerMode: false,
         dots: false,
-        vertical: true,
+        vertical: false,
         draggable: true,
         responsive: [{
             breakpoint: 830,
@@ -6232,7 +6271,7 @@ $('.dmsanpham-main').on({
         },{
             breakpoint: 500,
             settings: {
-                slidesToShow: 2
+                slidesToShow: 1
             }
         }]
     });
@@ -6246,7 +6285,7 @@ $('.dmsanpham-main').on({
           accessibility: false,
           slidesToShow: 2,
           slidesToScroll: 1,
-          autoplay: false,
+          autoplay: true,
           autoplaySpeed: 3000,
           speed: 1000,
           arrows: true,

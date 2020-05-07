@@ -37,7 +37,21 @@
       <div class="linebrk_valak"></div>
       <div class="main_manu_valak">
         <ul >
-          <?php include _template."layout/menu_content.php";?>
+          <?php //include _template."layout/menu_content.php";?>
+          <li class="<?php if($source=='index') echo 'active'; ?>"><a href=""><?= _trangchu ?></a></li>
+          <li class="<?php if($com=='gioi-thieu') echo 'active'; ?>"><a href="gioi-thieu.html">
+            <?= _gioithieu ?></a></li>
+            <li class="<?php if($com=='san-pham') echo 'active'; ?>"><a href="san-pham.html">
+              <?= _sanpham ?></a>
+<?= for2cap('product_danhmuc','product_list','san-pham','san-pham','','/')?>
+            </li>
+            <li class="<?php if($com == 'dich-vu') echo 'active'; ?>"><a href="dich-vu.html"><?= _dichvu ?></a></li>
+            <li class="<?php if($com == 'catalogue') echo 'active'; ?>"><a href="catalogue.html">catalogue</a></li>
+            <li class="<?php if($com == 'thu-vien') echo 'active'; ?>"><a href="thu-vien.html">
+              Album ảnh</a></li>
+          <li class="<?php if($com == 'tin-tuc') echo 'active'; ?>"><a href="tin-tuc.html"><?= _tintuc ?></a></li>
+          <li class="<?php if($com == 'lien-he') echo 'active'; ?>"><a href="lien-he.html">
+            <?= _lienhe ?></a></li>
         </ul>
       </div>
       <div class="linebrk_valak"></div>

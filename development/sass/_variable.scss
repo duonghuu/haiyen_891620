@@ -31,25 +31,25 @@ $font-nunito                            : 'Nunito', sans-serif;
 $font-lora                              : 'Lora', serif;
 
 
-$font-title             : $font-muli;
-$font-text              : $font-muli;
+$font-title             : $font-roboto;
+$font-text              : $font-roboto;
 $font-awesome           : 'Font Awesome 5 Free';
 $font-second            : 'Arial';
 /* ======================== HEADER ======================== */
-$bg-header-top          : #f9f9f9;
+$bg-header-top          : #f2f2f2;
 $bg-header              : #f9f9f9;
 $bg-breadcrumb           : #f7f6f6;
 /* ======================== MENU ======================== */
-$font-menu              : $font-muli;
-$color-menu-hover       : #ffb800;
-$bg-menu                : #e01c1a;
-$bg-valak               : #e01c1a;
+$font-menu              : $font-roboto;
+$color-menu-hover       : #ff0;
+$bg-menu                : #013a56;
+$bg-valak               : #013a56;
 $bg-menu-item           : transparent;
 $bg-menu-item-hover     : transparent;
 /* ======================== FOOTER ======================== */
-$bg-copyright       : #d11717;
-$bg-footer          : #000;
-$theme-color        : #e01c1a;
+$bg-copyright       : #171717;
+$bg-footer          : #171717;
+$theme-color        : #013a56;
 $height-map         : 485px;
 /* ======================== URL ======================== */
 $font-url           : 'css/fonts/';

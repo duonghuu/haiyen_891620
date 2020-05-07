@@ -1,6 +1,6 @@
 .box-menu-slider{
     
-    width: percentage(270/1200);
+    width: percentage(264/1200);
     position: relative;
     z-index: 2;
     ul{
@@ -9,21 +9,11 @@
     }
 }
 .menu-left{
-    background-color: #ebebeb;
-    height: 100%;
-    &>li{
-        &:after, &:before{
-            $menu-line-width: calc(100% - 30px);
-            content: "";
-            background-color: #d7d7d7;
-            @include box($menu-line-width, 1px);
-            @include absolute($bottom: 0, $left: 15px);
-        }
-        &:after{
-            background-color: #fff;
-            bottom: -1px;
-        }
-    }
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    height: 400px;
+    overflow-y: scroll;
+   
     li{
         padding: 15px;
         position: relative;
@@ -38,22 +28,27 @@
             
             @include setFont(16px, #1f1f1f, 400, "Arial");
             &:before {
-                content: "\f009";
+                content: "\f0a9";
                 font:{
-                    size: 7px;
+                    size: 14px;
                     weight: 700;
                     family: $font-awesome;
                 };
-                @include relative($top: -3px);
-                margin: 0 10px;
+                margin-right: 5px;
             }
         }
         @include setTagAHover(#707070, $bg-menu);
         ul{
             @extend %sub-menu-list;
             left: 100%;
-            top: 0;
-            width: 100%;
+            // top: 0;
+            width: 100%; 
         }
+        @include doubly(){
+            border-top: 1px solid #d3d3d3;
+        };
+    }
+    &>li{
+        position: static;
     }
 }

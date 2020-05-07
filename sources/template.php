@@ -2,8 +2,7 @@
 if($source=="index"){
   $about=get_fetch("select ten$lang as ten,ten2$lang as ten2,mota$lang as mota,thumb,photo from #_about 
       where type='gioi-thieu' ");
-  $product_danhmucnb=get_result("select ten$lang as ten,tenkhongdau,id,thumb,photo
-      ,type from #_product_danhmuc where type='thuc-don' and noibat>0 and hienthi>0 order by stt asc");
+  
     $spnoibat=get_result("select mota$lang as mota,ten$lang as ten,tenkhongdau,id,thumb,photo
         ,type,gia,giakm from #_product where type='thuc-don' and noibat>0 and hienthi>0 order by stt asc");
     $txtvisao=get_fetch("select ten$lang as ten,mota$lang as mota from #_about 
@@ -23,10 +22,16 @@ if($source=="index"){
     $video=get_result("select id,ten$lang as ten,tenkhongdau,link
      from #_video where hienthi=1 and type='video' order by stt");
 }
+$dmsp=get_result("select ten$lang as ten,tenkhongdau,id,type from #_product_danhmuc
+ where type='san-pham' and hienthi>0 order by stt asc");
+$dmspnoibat=get_result("select ten$lang as ten,tenkhongdau,id,type from #_product_danhmuc
+ where type='san-pham' and hienthi>0 and noibat>0 order by stt asc");
 $logolang = get_fetch("select ten$lang as ten,mota$lang as mota,photo as photo from 
 #_background where type='logo'");
 // $bannerlang = get_fetch("select photo as photo from #_background where type='banner'");
 $ftlogo=get_fetch("select photo from #_about where type='footer' ");
+$xuhuong = get_result("select id,ten$lang as ten,link from #_news where
+ type='xu-huong' and hienthi=1 order by stt asc");
 // $bgbnlang = get_fetch("select photo as photo from #_background where type='bgbn'");
 // $tutags = get_result("select id,ten$lang as ten,link from #_news where type='tags'
  // and hienthi=1 order by stt asc");

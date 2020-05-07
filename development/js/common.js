@@ -132,12 +132,12 @@ $(document).ready(function() {
     }, true);
   };
   if(js_deviceType == "computer"){
-    // $('.hoverhori').hover(function() {
-    //     var vitri = $(this).position().top;
-    //     $('.hoverhori> ul').css({
-    //       'top': vitri + 'px'
-    //     })
-    //   });
+    $('.hoverhori').hover(function() {
+        var vitri = $(this).position().top;
+        $('.hoverhori> ul').css({
+          'top': vitri + 'px'
+        })
+      });
     $(window).scroll(function(){
       var cach_top = $(window).scrollTop();
       var heaigt_header = $('.hd-bg').height();

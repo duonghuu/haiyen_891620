@@ -56,8 +56,8 @@
     <tr style="text-align:center">
         <td></td>
         <td>STT</td>
-        <td class="sortCol"><div>Tên<span></span></div></td>
         <?php /* 
+        <td class="sortCol"><div>Tên<span></span></div></td>
                          <td class="sortCol"><div>Điện thoại<span></span></div></td> */?>
         <td class="sortCol"><div>Email<span></span></div></td>
         <?php /*         
@@ -74,8 +74,8 @@
             <td style="width:15%;" align="center">
              <input data-val0="<?=$items[$i]['id']?>" data-val2="table_<?=$_GET['com']?>" data-val3="stt" onblur="stt(this)" type="text" value="<?=$items[$i]['stt']?>" name="ordering[]" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" class="tipS smallText update_stt" original-title="Nhập số thứ tự bài viết" rel="<?=$items[$i]['id']?>" />
          </td>
-         <td style="width:60%;" align="center"><b><?=$items[$i]['ten']?></b></td>
        <?php /*  
+         <td style="width:60%;" align="center"><b><?=$items[$i]['ten']?></b></td>
                         <td  style="width:60%;" align="center"><b><?=$items[$i]['dienthoai']?></b></td>  */?>
          <td  style="width:60%;" align="center"><b><?=$items[$i]['email']?></b></td>
          <?php /* 

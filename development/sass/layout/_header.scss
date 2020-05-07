@@ -1,70 +1,97 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-%hd-top-style {
-    margin: 0;
-    @include setFont(15px, #fff);
-}
-
-%hd-logo-style {
-    content: "";
-    background-color: #fff;
-    @include box(100%, 16px);
-    @include absolute($left: 0);
-}
-%hd-hotline-style {
-    @include absolute($right: 0px, $top: 50%);
-    transform: translateY(-50%);
-    @include boxstyle($display: inline-flex, $justify-content: space-between, 
-      $align-items: center);
-    @include p-el(before, $el-width: 231px, $el-height: 76px){
-      @include bg("hd-hotline.png",$background-repeat: no-repeat,$background-size: null,$background-position: 0 0);
-      @include relative($left: 0px, $top: 0px);
-    };
-    a{
-        @include setFont(18px, #c8000a, 400, $font-UTM-Magnesium );
-        @include absolute($left: 70px, $top: 33px);
-        @include text-stroke(0.7px #fff);;
-    }
-}
-.hd-hotline{
-    @extend %hd-hotline-style;
-}
-.hd-bg {
-    width: 100%;
+.hd {
     z-index: 450;
-    @include relative($left: 0);
-    @include bg("banner.png",$background-repeat: repeat,$background-size: null,$background-position: 0 0);
-}
-.hd-flex{
-    @include boxstyle($display: flex, $justify-content: center, 
-        $align-items: flex-start);
-    min-height: 150px;
-    position: relative;
-    .hd-info{
-        text-align: center; 
-        h2{
-            @include setFont(40px, #e01c1a, 400, $font-UTM-Loko);
-            margin: 20px 0 0;
-            text-transform: uppercase;
+    &__top{
+        background-color: $bg-header-top;
+        &-flex{
+            @include grid(flex, $flex-wrap: null, $justify-content: space-between, 
+              $align-items: null, $gutter: null);
+            min-height: 36px;
         }
-        .slogan{
-            @include setFont(30px, #333, 400, $font-SVN-Lobster);
+        marquee{
+            @include setFont(14px, #393a3a, 400, $font-text);
+            @include grid(inline-flex, $flex-wrap: null, $justify-content: null, 
+              $align-items: center, $gutter: null);
+            width: percentage(450/1200); 
+            margin-right: 20px;
         }
+        &-info{
+            @include grid(inline-flex, $flex-wrap: null, $justify-content: null, 
+              $align-items: null, $gutter: null);
+            @include flex(1);
+            p{
+                @include setFont(14px, #393a3a, 400, $font-text);
+                margin-bottom: 0;
+                position: relative;
+                border-right: 1px solid #d9d9d9;
+                padding-right: 20px;
+                @include grid(inline-flex, $flex-wrap: null, $justify-content: null, 
+                  $align-items: center, $gutter: null);
+                i{
+                    margin-right: 10px;
+                    color: #858585;
+                }
+                @include doubly(){
+                    margin-left: 20px;
+                };
+            }
+        }
+    }
+    &__bot{
+        &-flex{
+            @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+              $align-items: center, $gutter: null);
+        }
+    }
+    &__search{
         p{
-            @include setFont(18px, #333, 400);
+            @include setFont(14px, #393a3a, 400, $font-text);
+            margin: 10px 0 0;
+            strong{}
+            i{
+                  margin-right: 7px;
+                  display: inline-block;
+                @include p-el(after, $el-width: null, $el-height: null){
+                  content: ", ";
+                };
+            }
+        }
+    }
+    &__hotline{
+        @include grid(flex, $flex-wrap: null, $justify-content: null, 
+          $align-items: center, $gutter: null);
+        img{}
+        section{
+            margin-left: 7px;
+            p{
+                margin-bottom: 0;
+                @include setFont(15px, #000, 700, $font-text);
+                a{
+                    color: #f00;
+                    font-size: 16px;
+                }
+                strong{
+                    font-size: 16px;
+                    margin-left: 5px;
+                }
+                &+p{
+                    margin-top: 3px;
+                }
+            }
         }
     }
 }
 .logo{
-    display: block;
-    @include absolute($left: 0px, $top: 50%);
-    transform: translateY(-50%);
-    img{
-        height: 150px;
-        @include transition(all 0.4s ease);
-        @include when-inside('.fixed'){
-            height: 120px;
-        }
-    }
+    // display: block;
+    // @include absolute($left: 0px, $top: 50%);
+    // transform: translateY(-50%);
+    // img{
+    //     height: 150px;
+    //     @include transition(all 0.4s ease);
+    //     @include when-inside('.fixed'){
+    //         height: 120px;
+    //     }
+    // }
 }

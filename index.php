@@ -47,8 +47,8 @@ $_SESSION['dong'] = lay_banner('dong');
             <?php 
             include _template."layout/header.php";
             include _template."layout/menu_top.php";
-            // include _template."layout/valak_menu.php";
-            include _template."layout/slider.php";
+            include _template."layout/valak_menu.php";
+            if($source == "index") include _template."layout/slider.php";
             if($source != "index") echo $bread->display();
             ?>
             <div class="main_content <?php if($source!="index") echo 'container';  ?>">
@@ -67,6 +67,10 @@ $_SESSION['dong'] = lay_banner('dong');
             </div><!---END .main_content-->
         </section>
         <?php 
+        if($source=="index"){
+            include _template."layout/bottom.php";
+        include _template."layout/doitac.php";
+    }
         include _template."layout/footer.php";
         ?>
     </div><!---END .wapper-->

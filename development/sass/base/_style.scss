@@ -384,8 +384,7 @@ div#quangcao img:hover {
 }
 
 div#dknt {
-    flex: 1;
-    max-width: 440px;
+    
 }
 .maildesc{
     @include setFont(14px, #333);
@@ -393,25 +392,24 @@ div#dknt {
     margin-bottom: 20px;
 }
 form#frm_dknt {
-    @include boxstyle($display: flex,$justify-content: flex-end, $flex-wrap: wrap);
+    @include boxstyle($display: flex,$justify-content: space-between, $flex-wrap: wrap);
     overflow: hidden;
-
+    background-color: #313131;
+    border-radius: 5px;
     input[type='text'] {
-        @include setFont(14px, #000);
-        @include box(100%, 45px);
+        @include setFont(14px, #fff);
+        @include flex(1);
         padding: 0 1em;
-        background: #fff;
-        border: 1px solid #e2e2e2;
-        margin-bottom: 10px;
-        border-radius: 20px;
+        background: transparent;
+        border: 0;
     }
     #submit_nhantin {
         @include boxstyle($display: inline-flex,$align-items: center,$justify-content: center);
         @include setFont(16px, #fff);
-        background: $theme-color;
+        background: #f00;
         text-transform: uppercase;
-        padding: 11px 50px;
-        border-radius: 20px;
+        padding: 6px 30px;
+        border-radius: 5px;
         cursor: pointer;
         i{
         }
@@ -583,16 +581,20 @@ div.wap_item {
 }
 
 .doitac-bg {
-    background: #f1f1f1;
+    background: #fff;
     padding: 30px 0;
     .doitac-main {
-        width: calc(100% - 70px);
         margin: 0 auto;
+        padding: 0 30px;
+        border: 1px solid #bababa;
+        border-radius: 6px;
         .slick-prev{
-            left: -30px;
+            left: 0;
+            opacity: 1;
         }
         .slick-next{
-            right: -30px;
+            right: 0;
+            opacity: 1;
         }
         .doitac-item {
             padding: em(5);
@@ -653,7 +655,12 @@ div.wap_item {
   color: #fff;
 }
 .slider-bg{
-    margin-bottom: 45px;
+    padding: 15px 0;
+    background-color: #f2f2f2;
+    &--flex{
+        @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+          $align-items: null, $gutter: null);
+    }
 }
 .slider-flex{
     @include boxstyle($display: flex, $justify-content: space-between);
@@ -675,6 +682,7 @@ div.wap_item {
     position:relative;
     overflow:hidden;
     @include flex(1);
+    margin-left: 6px;
     .slideshow-slider-main{
         @include clearfix;
         .slideshow-slider-item {

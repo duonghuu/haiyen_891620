@@ -11,7 +11,7 @@
     font-weight: 700;
     font-size: 20px;
 }
-$product-gutter: percentage(26/1200);
+$product-gutter: percentage(16/1200);
 .product-grid{
     @include grid($display: flex, $flex-wrap: wrap, $gutter: $product-gutter);
 
@@ -21,7 +21,7 @@ $product-gutter: percentage(26/1200);
     padding: 0 em(15);
 }
 .pr-box{
-    @include grid-col($col: 3, $grid-columns: 12, $gutter: $product-gutter);
+    @include grid-col($col: 12/5, $grid-columns: 12, $gutter: $product-gutter);
     position:relative;
     @include transition(all .2s linear);
 
@@ -35,12 +35,13 @@ $product-gutter: percentage(26/1200);
         position:relative;
         margin: 0 auto;
         background: #fff;
+        border: 1px solid #ebebeb;
         .imgsp{
             display: block;
             overflow: hidden;
             position: relative;
-            padding-top: percentage(220/280);
-            margin-bottom: 10px;
+            padding-top: percentage(615/500);
+            
             img{
                 @extend %img-fill; 
                 object-fit: cover;
@@ -59,10 +60,17 @@ $product-gutter: percentage(26/1200);
             z-index: 6;
             position: relative;
             text-align: center;
+            &-panel{
+                @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+                  $align-items: flex-end, $gutter: null);
+                padding: 10px;
+            }
             h3{
                 @include setFont(16px, #333, 400);
                 @include setTagAHover(#333, $theme-color);
                 margin-bottom: 0;
+                background-color: #ededed;
+                padding: 10px;
                 a{
                     @include transition(all .2s ease);
                     line-height: 1.3;
@@ -82,16 +90,20 @@ $product-gutter: percentage(26/1200);
                 strong{
                     // @include boxstyle($display: inline-flex, $flex-wrap: wrap);
                     // font-weight: 700;
-                    color: $theme-color;
+                    color: #f00;
                     font-size: 16px;
                     display: block;
                     margin: 10px 0;
                 }
 
                 span{
-                    color: $theme-color;
-                    margin-left: 5px;
+                    color: #f00;
                 }
+
+            }
+            i{
+                font-style: normal;
+                @include setFont(16px, #333);
             }
         }
         .muangay{

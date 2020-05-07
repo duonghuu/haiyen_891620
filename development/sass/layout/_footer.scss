@@ -7,7 +7,7 @@
     height: $height-map;
 }
 %copyright-font {
-    @include setFont(12px, #fff, 400, $font-text);
+    @include setFont(12px, #6d6d6d, 400, $font-text);
 }
 
 
@@ -15,13 +15,11 @@
     position: relative;
     width: 100%;
     z-index: 5;
-    background-size: cover;
     .ft-top{
-        // background-color: $bg-footer;
+        background-color: $bg-footer;
     }
     .ft-flex {
         @include boxstyle($display: flex, $justify-content: space-between);
-        padding: 30px 0;
         .ft-logo { 
             a{
                 img{
@@ -31,17 +29,34 @@
         }
         .ft-info {
             position: relative;
-            width: percentage(520/1200);
+            width: percentage(530/1366);
             color: #fff;
+            padding-top: 50px;
+            padding-left: percentage(83/1366);
         }
-
+        .ft-right{
+            @include flex(1);
+            border-left: 1px solid #2d2d2d;
+            &__top{
+                padding: 15px  percentage(83/1366) 15px 40px;
+                @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+                  $align-items: center, $gutter: null);
+                img{}
+            }
+            &__bot{
+                border-top: 1px solid #2d2d2d;
+                padding: 25px percentage(83/1366) 25px 0;
+                @include grid(flex, $flex-wrap: wrap, $justify-content: null, 
+                  $align-items: null, $gutter: null);
+            }
+        }
 
 
         .ft-bando {
         }
 
         .ft-fanpage {
-            width: percentage(280/1200);
+            width: percentage(1/3);
             .fanpageplace {
                 height: 180px;
                 overflow: hidden;
@@ -49,6 +64,11 @@
         }
 
         .ft-dknt{
+            @include flex(1);
+            margin-left: 20px;
+            .mailtit{
+                @include setFont(14px, #fff, 400, $font-text);
+            }
         }
 
         .ft-social{
@@ -57,7 +77,9 @@
         }
 
         .ft-baiviet {
-            @include flex(1);
+            width: percentage(1/3);
+            padding-left: 40px;
+            padding-right: 10px;
             ul {
                 @extend %reset-list;
                 li {
@@ -95,15 +117,15 @@
     }
 
     .ft-tit {
-        margin-bottom: 30px;
-        text-transform: capitalize;
+        margin-bottom: 20px;
+        text-transform: uppercase;
         strong, span {
                 position: relative;
-                @include setFont(20px, #fff, 400, $font-SVN-Lobster);
-                @include p-el(before, $el-width: 60px, $el-height: 2px){
-                  background-color: #ffb800;
-                  @include absolute($left: 0px, $bottom: -10px);
-            };
+                @include setFont(16px, #fff, 700);
+            //     @include p-el(before, $el-width: 60px, $el-height: 2px){
+            //       background-color: #ffb800;
+            //       @include absolute($left: 0px, $bottom: -10px);
+            // };
         }
 
     }
@@ -123,7 +145,8 @@
 
     .copyright {
         position: relative;
-        @include background-opacity($bg-copyright, 0.5);
+        background-color: $bg-footer;
+        border-top: 1px solid #2d2d2d;
         .ft-wrap {
             min-height: 40px;
             @include boxstyle($display: flex, $justify-content: space-between, $align-items: center);
@@ -146,6 +169,7 @@
 
                     span {
                         margin-left: 4px;
+                        color: #fff;
                     }
 
                     & + li {
@@ -153,7 +177,7 @@
 
                         &::before {
                             content: "";
-                            background-color: #fff;
+                            background-color: #6d6d6d;
                             @include box(1px, 12px);
                             @include absolute($left: -1em);
                         }

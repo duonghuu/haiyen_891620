@@ -33,3 +33,48 @@
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
 }
+
+@function opacitator($color){
+  $hi: 1;
+  $lo: 0;
+  $tol: 0.01;
+  $rgbs: (red($color) green($color) blue($color));
+  
+  @while($hi - $lo > $tol){
+    $m: $lo + (($hi - $lo) / 2);
+    @if(getOpositesForOpacity($m, $rgbs, true)){
+      $hi: $m;
+    }
+    @else{
+      $lo: $m;
+    }
+  }
+  $rgbs: getOpositesForOpacity($hi, $rgbs);
+  @return rgba( nth($rgbs, 1), nth($rgbs, 2), nth($rgbs, 3), $hi);
+}
+
+
+@function getOpositesForOpacity($opacity, $rgbs, $returnValidity: false){
+    $newList: ();
+    $valid: true;
+    @each $c in $rgbs{
+      $newVal: oppositeForOpacity($opacity, $c);
+      @if( $newVal >= 0 ){
+         $newList: append($newList, $newVal);
+      }
+      @else{
+        @return false; 
+      }
+    }
+    @if($returnValidity ){
+      @return $valid;
+    }
+    @else{
+        @return $newList;
+    }
+}
+
+
+@function oppositeForOpacity($opacity, $c){
+    @return 255 - ( 255 - $c ) / $opacity;
+}

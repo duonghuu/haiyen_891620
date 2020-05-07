@@ -1,6 +1,6 @@
 .dmspbox{
     float: left;
-    width: percentage(270/1200);
+    width: percentage(264/1200);
     position: relative;
     &:hover {
         .dmsp-container{
@@ -9,13 +9,13 @@
     }
   .tit{
         margin: 0;
-        background-color: #438ceb;
+        background-color: #0093dd;
         cursor: pointer;
-        @include setFont(18px, #fff, 700);
-        @include boxstyle($display: flex, $align-items: center);
-        line-height: 44px;
+        @include setFont(15px, #fff, 400);
+        @include grid($display: flex, $justify-content: space-between, $align-items: center);
+        line-height: 48px;
+        padding: 0 25px;
         i{
-            margin: 11px;
         }
     }
     .dmsp-container{
