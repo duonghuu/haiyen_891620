@@ -164,7 +164,11 @@
 }
 /*========= SLIDER ===============*/
 @mixin setSlider_SM(){
+  .box-menu-slider{
+    display: none;
+  }
   #slideshow {
+    margin-left: 0;
       .slideshow-slider-main{
           .slideshow-slider-item {
               & > section {
@@ -205,30 +209,32 @@
 }
 /*========= HEADER ===============*/
 @mixin setHeaderCenter(){
-  #search{
+  .hd__top {
+    marquee{
+      margin-right: 0;
+      width: 100%;
+    }
+    .hd__top-info{
+      display: none;
+    }
+  }
+  .hd__hotline{
     display: none;
   }
-  @include media("<=mobile"){
-    .hd-flex{
-      @include flex-wrap(wrap);
-      padding-bottom: 10px;
-      .logo{
+  .hd__bot-flex{
+    .logo{
+      width: percentage(190/768);
+
+      @include media("<=mobile"){
         width: 100%;
-        .logo-text {
-          h2{
-            @include font-size(20);
-          }
-          span{
-            @include font-size(16);
-            padding-left: 0;
-          }
-        }
-      }
-      .giohang_fix{
-        margin-left: 0;
+        text-align: center;
+        margin-bottom: 7px;
       }
     }
-  };
+    .hd__search{
+      @include flex(1);
+    }
+  }
   @content;
 }
 /*========= MENU ===============*/
@@ -252,6 +258,23 @@
   @content;
 }
 /*========= HOME ===============*/
+@mixin setGioiThieu(){
+  .gioithieu__img{
+    h5{
+      @include flexbox;
+    }
+    order: 0;
+    margin-bottom: 7px;
+    width: 100%;
+  }
+  .gioithieu__info{
+    h5{
+      display: none;
+    }
+    margin-right: 0;
+    width: 100%;
+  }
+}
 @mixin setSpnoibatSmall(){
   .spnoibat-bg{
     .danhmuc-sanpham{
@@ -318,6 +341,11 @@
   .pr-box, .spnoibat-bg .danhmuc-sanpham .danhmuc-sanpham-box .product-grid .pr-box{
     @include grid-col($col: $p_col, $grid-columns: 12, $col-offset: null, $gutter: $p_gutter);  
   }
+  .pr-box article .info {
+    h3, i, p{
+      @include font-size(14);
+    }
+  }
   @content;
 }
 /*========= NEW ===============*/
@@ -377,11 +405,26 @@
       @include flex-wrap(wrap);
       .ft-info{
         width: 100%;
-        margin-bottom: 1em;
+        padding: 1em;
+      }
+      .ft-baiviet{
+        padding: 0;
+        width: 49%;
+      }
+      .ft-right__bot{
+        padding: 1em;
+
+      }
+      .ft-right__top{
+        padding: 1em;
+        img{
+          display: none;
+        }
       }
       .ft-social, .ft-dknt  {
         width: 49%;
         margin-bottom: 1em;
+        margin-left: 0;
         @include media('<=mobile'){
           width: 100%;
         };

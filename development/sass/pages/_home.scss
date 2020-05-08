@@ -41,7 +41,20 @@
   &__img {
     order: 1;
     width: percentage(580/1200);
+    h5 {
+      text-transform: uppercase;
+      display: none;
+      @include setFont(25px, #f00, 400, $font-text);
+      @include grid(flex, $flex-wrap: nowrap, $justify-content:space-between, $align-items:center, $gutter:null);
+      position: relative;
 
+      @include p-el(after, $el-width:null, $el-height:21px) {
+        @include bg("gioithieu-tit.png", $background-repeat: no-repeat, $background-size:null, $background-position:0 0);
+        @include flex(1);
+        margin-left: 10px;
+        position: relative;
+      }
+    }
     img {
     }
   }
@@ -143,6 +156,7 @@
       }
       &+li{
         margin-left: 3px;
+        margin-bottom: 3px;
       }
     }
   }

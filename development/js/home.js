@@ -8,7 +8,7 @@ $('.doitac-main').on({
       accessibility: false,
       slidesToShow: 9,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 3000,
       speed: 1000,
       arrows: true,
@@ -23,7 +23,7 @@ $('.doitac-main').on({
       },{
           breakpoint: 500,
           settings: {
-              slidesToShow: 5
+              slidesToShow: 3
           }
       },{
           breakpoint: 400,

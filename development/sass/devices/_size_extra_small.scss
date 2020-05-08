@@ -7,11 +7,8 @@
       @include setSlider_SM;
 
       /*========= HOME ===============*/
-      @include setTinNB_SM;
-      @include setViSao_SM;
-      $product-gutter: percentage(30/1330);
-      @include setProductColumnMobile($p_col: 6, $p_gutter: $product-gutter);
-      @include setTinVideoFull;
+      $product-gutter: percentage(16/1200);
+        @include setProductColumnMobile($p_col: 4, $p_gutter: $product-gutter); 
       
       /*========= FOOTER ===============*/
       @include setFooterSmall;

@@ -21,12 +21,14 @@
   <?php /* <?php if($deviceType!="computer"){ ?>
           <a href="gio-hang.html" class="giohang_fix"><i></i><span><?= count($_SESSION["cart"]) ?></span></a>
         <?php } ?> */?>
+        <?php /* 
         <?php if($deviceType!="computer"){ ?>
-    <div class="valak-search"> <input type="text" id="txtCountry2" class="form-control keyword placeholder-1"
-         required="true" value="<?=_nhaptukhoatimkiem?>..." onclick="if(this.value=='<?=_nhaptukhoatimkiem?>...')
-         {this.value=''}" onblur="if(this.value==''){this.value='<?=_nhaptukhoatimkiem?>...'}"> 
-         <span onclick="onSearch($(this));return false;" class="btn_search"><i class="fas fa-search"></i></span> </div> 
-        <?php } ?>
+            <div class="valak-search"> <input type="text" id="txtCountry2" class="form-control keyword placeholder-1"
+                 required="true" value="<?=_nhaptukhoatimkiem?>..." onclick="if(this.value=='<?=_nhaptukhoatimkiem?>...')
+                 {this.value=''}" onblur="if(this.value==''){this.value='<?=_nhaptukhoatimkiem?>...'}"> 
+                 <span onclick="onSearch($(this));return false;" class="btn_search"><i class="fas fa-search"></i></span> </div> 
+                <?php } ?> 
+        */?>
 </div>
 <div id="valak_openmmenu">
   <div id="valak_main">

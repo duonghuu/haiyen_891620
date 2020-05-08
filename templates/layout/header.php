@@ -27,6 +27,9 @@
               onblur="if(this.value==''){this.value='<?=_nhaptukhoatimkiem?>...'}"> 
               <select name="id_danhmuc" id="id_danhmuc" class="form-control">
                 <option value="">Tất cả</option>
+                <?php foreach ($dmsp as $key => $value) {  ?>
+                <option value="<?= $value["id"] ?>"><?= $value["ten"] ?></option>
+                <?php } ?>
 
               </select>
               <span onclick="onSearch($(this));return false;" class="btn_search">

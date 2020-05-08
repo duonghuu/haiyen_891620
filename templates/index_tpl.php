@@ -1,7 +1,9 @@
 <div class="gioithieu">
     <div class="container">
         <div class="gioithieu-flex">
-            <a href="gioi-thieu.html" class="gioithieu__img"><img 
+            <a href="gioi-thieu.html" class="gioithieu__img">
+              <h5><?= _gioithieu ?></h5>
+              <img 
                 src="<?= _upload_hinhanh_l.$about["thumb"] ?>" alt="<?= _gioithieu ?>"></a>
                 <div class="gioithieu__info">
                     <h5><?= _gioithieu ?></h5>
