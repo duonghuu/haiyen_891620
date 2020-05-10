@@ -79,12 +79,14 @@ $product-gutter: percentage(16/1200);
 
             p{
                 @include boxstyle($display: flex, $flex-wrap: wrap, 
-                    $align-items: flex-end, $justify-content: center);
+                    $align-items: flex-end, $justify-content: space-between);
                 @include setFont(16px, #333);
                 margin: 0;
+                width: 100%;
                 line-height: 1.5;
                 del{
                     color: #8c8c8c;
+                    margin-left: 5px;
                 }
 
                 strong{
@@ -104,6 +106,8 @@ $product-gutter: percentage(16/1200);
             i{
                 font-style: normal;
                 @include setFont(16px, #333);
+                width: 100%;
+                text-align: left;
             }
         }
         .muangay{

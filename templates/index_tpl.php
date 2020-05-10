@@ -23,7 +23,7 @@
         <h4><a href="san-pham/<?= $vdm["tenkhongdau"] ?>-<?= $vdm["id"] ?>"><?= $vdm["ten"] ?></a></h4>
       </div>
       <!-- Nav pills -->
-      <ul class="nav nav-pills justify-content-center">
+      <ul class="nav nav-pills justify-content-md-center">
         <?php foreach ($dmsp1 as $kli => $vli) { ?>
         <li class="nav-item">
           <a class="nav-link <?= ($kli==0)?'active':'' ?>" data-toggle="pill" 

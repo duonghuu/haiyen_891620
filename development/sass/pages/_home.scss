@@ -43,10 +43,10 @@
     width: percentage(580/1200);
     h5 {
       text-transform: uppercase;
-      display: none;
       @include setFont(25px, #f00, 400, $font-text);
       @include grid(flex, $flex-wrap: nowrap, $justify-content:space-between, $align-items:center, $gutter:null);
       position: relative;
+      display: none;
 
       @include p-el(after, $el-width:null, $el-height:21px) {
         @include bg("gioithieu-tit.png", $background-repeat: no-repeat, $background-size:null, $background-position:0 0);
@@ -77,6 +77,8 @@
     }
   }
   &__desc {
+    text-align: justify;
+    text-align-last: left;
   }
   &__link {
     @include setFont(14px, #fff);

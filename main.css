@@ -7778,10 +7778,10 @@ body.compensate-for-scrollbar {
 form#frm_dknt #submit_nhantin, .btn-idx {
   display: inline-flex; }
 
-.contact-flex, form#frm_dknt, .slider-flex, #footer .ft-flex, #footer .copyright .ft-wrap, div.wap_pro {
+.contact-flex, form#frm_dknt, .slider-flex, #footer .ft-flex, #footer .copyright .ft-wrap, .pr-box article .info p, div.wap_pro {
   justify-content: space-between; }
 
-form#frm_dknt #submit_nhantin, .main-nav > ul > li > a, .pr-box article .info p {
+form#frm_dknt #submit_nhantin, .main-nav > ul > li > a {
   justify-content: center; }
 
 form#frm_dknt #submit_nhantin, .main-nav > ul > li > a, #footer .copyright .ft-wrap, #footer .copyright .ft-wrap ul.ft-thongke li {
@@ -9552,39 +9552,34 @@ div.wap_item {
   object-position: top center;
   object-fit: cover; }
 
-.mybs-carousel {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  .mybs-carousel .carousel-indicators {
-    width: 20%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    position: relative;
-    max-height: 680px;
-    overflow-y: scroll;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
-    .mybs-carousel .carousel-indicators li {
-      width: 100%;
-      height: auto;
-      margin-bottom: 5px;
-      border: 0; }
-      .mybs-carousel .carousel-indicators li figure {
-        position: relative;
-        padding-top: 133.333333333%;
-        margin-bottom: 0; }
-  .mybs-carousel .carousel-slider {
-    order: 1;
-    width: 78.6666666667%;
-    position: relative; }
-    .mybs-carousel .carousel-slider .carousel-item {
+.mybs-carousel .carousel-indicators {
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-left: 0;
+  margin-right: 0;
+  display: block; }
+  .mybs-carousel .carousel-indicators li {
+    width: 12.5%;
+    height: auto;
+    margin: 0;
+    -webkit-box-flex: unset;
+    -webkit-flex: unset;
+    -moz-box-flex: unset;
+    -moz-flex: unset;
+    -ms-flex: unset;
+    flex: unset;
+    display: inline-block; }
+    .mybs-carousel .carousel-indicators li figure {
       position: relative;
-      padding-top: 133.333333333%; }
+      padding-top: 123%;
+      margin-bottom: 0; }
+
+.mybs-carousel .carousel-slider {
+  position: relative; }
+  .mybs-carousel .carousel-slider .carousel-item {
+    position: relative;
+    padding-top: 123%; }
 
 @-webkit-keyframes dropInDown {
   0% {
@@ -10364,7 +10359,6 @@ span.total {
     width: 48.3333333333%; }
     .gioithieu__img h5 {
       text-transform: uppercase;
-      display: none;
       color: #f00;
       font-size: 25px;
       font-weight: 400;
@@ -10374,7 +10368,8 @@ span.total {
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
-      position: relative; }
+      position: relative;
+      display: none; }
       .gioithieu__img h5:after {
         height: 21px;
         background-image: url("images/gioithieu-tit.png");
@@ -10421,6 +10416,9 @@ span.total {
         flex: 1;
         margin-left: 10px;
         position: relative; }
+  .gioithieu__desc {
+    text-align: justify;
+    text-align-last: left; }
   .gioithieu__link {
     color: #fff;
     font-size: 14px;
@@ -11136,9 +11134,11 @@ span.total {
         color: #333;
         font-size: 16px;
         margin: 0;
+        width: 100%;
         line-height: 1.5; }
         .pr-box article .info p del {
-          color: #8c8c8c; }
+          color: #8c8c8c;
+          margin-left: 5px; }
         .pr-box article .info p strong {
           color: #f00;
           font-size: 16px;
@@ -11149,7 +11149,9 @@ span.total {
       .pr-box article .info i {
         font-style: normal;
         color: #333;
-        font-size: 16px; }
+        font-size: 16px;
+        width: 100%;
+        text-align: left; }
     .pr-box article .muangay {
       color: #808080;
       font-size: 14px;
@@ -12169,6 +12171,24 @@ background: #fff;
         -moz-justify-content: center;
         justify-content: center; }
   #search .my-search select {
-    display: none; } }
+    display: none; }
+  #footer .ft-tit span {
+    font-size: 14px;
+    font-size: 0.875rem; }
+  .spnoibat .nav {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between; }
+    .spnoibat .nav li {
+      width: 49.5%; }
+      .spnoibat .nav li .nav-link {
+        font-size: 13px;
+        font-size: 0.8125rem;
+        text-align: center;
+        display: block; }
+      .spnoibat .nav li + li {
+        margin-left: 0; } }
 
 /*# sourceMappingURL=main.css.map */

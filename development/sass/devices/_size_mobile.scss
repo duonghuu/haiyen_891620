@@ -24,4 +24,22 @@
           @include setContact;
           @include setCopyrightCenter;
           #search .my-search select{display: none;}
+          #footer .ft-tit span{
+            @include font-size(14);
+          }
+          .spnoibat .nav {
+
+              @include justify-content(space-between);
+            li {
+                        width: 49.5%;
+                        .nav-link{
+                          @include font-size(13);
+                          text-align: center;
+                          display: block;
+                        }
+                        &+li{
+                          margin-left: 0;
+                        }
+                      }
+          }
 }
