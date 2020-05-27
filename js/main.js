@@ -6172,6 +6172,9 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function() {
+  
+
 $('.doitac-main').on({
       beforeChange: function(event, slick, currentSlide, nextSlide) {
           myLazyLoad.update();
@@ -6182,7 +6185,7 @@ $('.doitac-main').on({
       accessibility: false,
       slidesToShow: 9,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 3000,
       speed: 1000,
       arrows: true,
@@ -6310,7 +6313,7 @@ $('.dmsanpham-main').on({
           }
           ]
       });
-
+      });
   $('.main_manu_valak ul li').each(function(index, el) {
     if($(this).children("ul").length) {
       $(this).prepend('<div class="btn_expand_menu_valak"></div>');

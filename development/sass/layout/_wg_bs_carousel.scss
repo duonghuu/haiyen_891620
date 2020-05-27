@@ -30,10 +30,35 @@
   .carousel-slider{
       position: relative;
     .carousel-item{
+      a{
       position: relative;
       padding-top: $product-ratio;
+      display: block;
       img{
         @extend %mybs-carousel-img;
+      }
+      &:before{
+
+        @include box(50px, 50px, 100%);
+        @include absolute($right: 1em, $top: 1em);
+        @include setFont(20px, #fff, 700, $font-awesome);
+        @include background-opacity(#000, 0.6);
+        @include transition(all 0.2s ease);
+        @include grid(inline-flex, $justify-content: center, $align-items: center);
+        content: "\f00e";
+        z-index: 56;
+        opacity: 0;
+      }
+      &:hover{
+        &:before{
+          opacity: 1;
+        }
+      }
+      @include media("<=mobile"){
+        &:before{
+          opacity: 1;
+        }
+      };
       }
       &.active{
         img{

@@ -12,8 +12,8 @@
               <!-- The slideshow -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <a data-fancybox="gallery27" data-caption="<?= $row_detail["ten"] ?>" href="
-                    <?= _upload_sanpham_l.$row_detail["photo"] ?>">
+                  <a data-fancybox="gallery27" data-caption="<?= $row_detail["ten"] ?>" 
+                    href="<?= _upload_sanpham_l.$row_detail["photo"] ?>">
                     <img src="<?= $img_row_detail ?>" alt="<?= $row_detail["ten"] ?>"></a>
                   </div>
                   <?php foreach ($hinhthem as $k_hinh => $v_hinh) { 

@@ -7754,7 +7754,7 @@ body.compensate-for-scrollbar {
 .slick-slider:hover .slick-prev, .slick-slider:hover .slick-next {
   opacity: 1; }
 
-.img-fill, .mybs-carousel .carousel-indicators li figure img, .mybs-carousel .carousel-slider .carousel-item img, .tinnb-main__item a figure img, .cart-info-product-list .product-image figure img, .pr-box article .imgsp img {
+.img-fill, .mybs-carousel .carousel-indicators li figure img, .mybs-carousel .carousel-slider .carousel-item a img, .tinnb-main__item a figure img, .cart-info-product-list .product-image figure img, .pr-box article .imgsp img {
   position: absolute;
   top: 0;
   right: 0;
@@ -9548,7 +9548,7 @@ div.wap_item {
   .dm-sp #danhmuc ul li:hover > ul, .dm-sp #danhmuc ul li:active > ul, .dm-sp #danhmuc ul li:focus > ul {
     display: block; }
 
-.mybs-carousel .carousel-indicators li figure img, .mybs-carousel .carousel-slider .carousel-item img {
+.mybs-carousel .carousel-indicators li figure img, .mybs-carousel .carousel-slider .carousel-item a img {
   object-position: top center;
   object-fit: cover; }
 
@@ -9577,9 +9577,40 @@ div.wap_item {
 
 .mybs-carousel .carousel-slider {
   position: relative; }
-  .mybs-carousel .carousel-slider .carousel-item {
+  .mybs-carousel .carousel-slider .carousel-item a {
     position: relative;
-    padding-top: 123%; }
+    padding-top: 123%;
+    display: block; }
+    .mybs-carousel .carousel-slider .carousel-item a:before {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      font-family: "Font Awesome 5 Free";
+      background: #000;
+      background: rgba(0, 0, 0, 0.6);
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      content: "\f00e";
+      z-index: 56;
+      opacity: 0; }
+    .mybs-carousel .carousel-slider .carousel-item a:hover:before {
+      opacity: 1; }
+    @media (max-width: 425px) {
+      .mybs-carousel .carousel-slider .carousel-item a:before {
+        opacity: 1; } }
 
 @-webkit-keyframes dropInDown {
   0% {

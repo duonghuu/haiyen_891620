@@ -1,3 +1,6 @@
+$(document).ready(function() {
+  
+
 $('.doitac-main').on({
       beforeChange: function(event, slick, currentSlide, nextSlide) {
           myLazyLoad.update();
@@ -135,4 +138,5 @@ $('.dmsanpham-main').on({
               }
           }
           ]
+      });
       });

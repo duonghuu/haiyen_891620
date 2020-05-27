@@ -49,7 +49,7 @@ switch($type){
 		break;
 
 		default:
-		$config['type'] = array('seo','ten','noibat','danhmuc','list','hinhanh','noidung',
+		$config['type'] = array('seo','ten','noibat','danhmuc','list','hinhanh','noidung','mota2',
 			'gia','giakm','hinhthem','masp');
 		$config['ck'] = array('mota2');
 		$config['title'] = array('tieubieu'=>"Sản phẩm hot",'noibat'=>"Nổi bật",
